@@ -1,0 +1,148 @@
+:root {
+  --color-dark-grey: #a5a5a5;
+  --color-medium-grey: #e1e1e1;
+  --color-light-grey: #f0f0f0;
+}
+
+html,
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+ul {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0px;
+}
+
+#app {
+  padding: 5px 20px 5px 20px;
+  border: 2px solid black;
+  min-width: 50%;
+  max-width: 60%;
+}
+.container {
+  width: 100%;
+  margin: 30px 0px 30px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.container > div {
+  width: 100%;
+}
+.container:nth-child(odd) > *:last-child {
+  display: flex;
+  justify-content: end;
+}
+
+#graph-contents {
+  height: 600px;
+  background-color: var(--color-light-grey);
+  display: flex;
+  justify-content: end;
+}
+#graph-coordinate {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  overflow-x: scroll;
+}
+
+#graph-coordinate > div::before {
+  content: "";
+  width: 2px;
+  height: 80%;
+  background-color: black;
+  position: absolute;
+}
+#graph-bar-x,
+#graph-bar-y {
+  display: flex;
+  height: 80%;
+}
+#graph-bar-x {
+  position: relative;
+}
+#graph-bar-x::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transform: translateY(-50%);
+}
+#graph-bar-x li {
+  padding: 0px 30px;
+  width: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: end;
+  position: relative;
+}
+#graph-bar-x li div {
+  position: relative;
+  width: 100%;
+  bottom: 50%;
+  height: 50%;
+}
+#graph-bar-x li > span {
+  position: absolute;
+  bottom: 0;
+  margin-top: 5px;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+#graph-bar-x li div span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#graph-bar-y {
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  left: -35px;
+}
+#graph-bar-y li {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.edit-list {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 20% 60% 20%;
+  gap: 2px;
+  margin: 2px 0px 2px 0px;
+  overflow: hidden;
+}
+.edit-list > * {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 0px;
+}
+.edit-list:nth-child(odd) {
+  background-color: var(--color-light-grey);
+}
+.edit-list:nth-child(even) {
+  background-color: var(--color-medium-grey);
+}
+
+#json-edit-textarea {
+  width: 100%;
+  height: 300px;
+  resize: none;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./index.css">
+    <script defer src="./index.js"></script>
+    <title>아이엠파인 SD팀 자바스크립트 면접과제</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <span>아이엠파인 SD팀 지원자 하수환</span>
+        </div>
+        <div class="container">
+            <header>1. 그래프 (그래프 클릭 시 정확한 값을 알 수 있습니다.)</header>
+            <div id="graph-contents">
+                <div id="graph-coordinate">
+                    <ul id="graph-bar-y">
+                    </ul>
+                    <div></div>
+                    <ul id="graph-bar-x">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <header>2. 값 편집</header>
+            <div class="edit-list">
+                <div>ID</div>
+                <div>값</div>
+                <div></div>
+            </div>
+            <ul id="value-edit-contents">
+            </ul>
+            <div>
+                <button id="value-edit-apply">Apply</button>
+            </div>
+        </div>
+        <div class="container">
+            <header>3. 값 추가</header>
+            <div>
+                <input id="add-id" type="text" placeholder="ID" />
+                <input id="add-value" type="number" placeholder="VALUE" />
+                <button id="add-btn" class="apply-button">Add</button>
+            </div>
+        </div>
+        <div class="container">
+            <header>4. 값 고급 편집</header>
+            <textarea id="json-edit-textarea" placeholder="data가 없습니다."></textarea>
+            <div>
+                <button id="value-json-edit-apply">Apply</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
